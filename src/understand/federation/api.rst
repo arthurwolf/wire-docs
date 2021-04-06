@@ -9,7 +9,7 @@ The Federation API consists of two *layers*:
 
 
 Qualified Identifiers and Names
------------
+-------------------------------
 
 The federated (and consequently distributed) architecture is reflected in the
 structure of the various identifiers and names used in the API. In the context
