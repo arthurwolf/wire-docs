@@ -12,27 +12,26 @@ Qualified Identifiers and Names
 -------------------------------
 
 The federated (and consequently distributed) architecture is reflected in the
-structure of the various identifiers and names used in the API. In the context
-of federation, every identifier has to be a *qualified* identifier. This means
-that in addition to other information carried by the identifier, it also
-includes the domain name of the backend it is associated with. While other parts
-of some identifiers may change, the domain name is static.
+structure of the various identifiers and names used in the API. Before
+federation, identifiers were only unique in the context of a single backend; for
+federation, they are made globally unique by combining them with the federation
+domain of their backend. We call these combined identifiers *qualified*
+identifiers. While other parts of some identifiers or names may change, the
+domain name (i.e. the qualifying part) is static.
 
 In particular, we use the following identifiers throughout the API:
 
-* Qualified User ID (QUID): `user_uuid@backend-domain.com`
-* Qualified User Name (QUN): `user_name@backend-domain.com`
-* Qualified Device ID (QDID) attached to a QUID: `device_uuid.user_uuid@backend-domain.com`
-* Qualified Conversation/Group ID (QCID/QGID): `backend-domain.com/groups/group_uuid`
-* Qualified Team ID (QDID): `backend-domain.com/teams/team_uuid`
+* :ref:`Qualified User ID <qualified-user-id>` (QUID): `user_uuid@backend-domain.com`
+* :ref:`Qualified User Name <qualified-user-name>` (QUN): `user_name@backend-domain.com`
+* :ref:`Qualified Device ID <qualified-device-id>` (QDID) attached to a QUID: `device_uuid.user_uuid@backend-domain.com`
+* :ref:`Qualified Conversation <qualified-conversation-id>`/:ref:`Group ID <qualified-group-id>` (QCID/QGID): `backend-domain.com/groups/group_uuid`
+* :ref:`Qualified Team ID <qualified-team-id>` (QTID): `backend-domain.com/teams/team_uuid`
 
 While the canonical representation for purposes of visualization is as displayed
 above, the API often decomposes the qualified identifiers into an (unqualified)
-id and a domain name.
+id and a domain name. In the code and API documentation, we sometimes call a
+qualified username a "handle".
 
-TODO: Link to protobuf definition or an example later in this chapter.
-TODO: Note how we sometimes use "handle" to refer to (qualified?) id?
-TODO: Should we include a proper definition for user display names here, i.e. a regex or similar?
 
 API between Federators
 -----------------------
