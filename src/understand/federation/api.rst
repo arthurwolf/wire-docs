@@ -30,7 +30,7 @@ In particular, we use the following identifiers throughout the API:
 While the canonical representation for purposes of visualization is as displayed
 above, the API often decomposes the qualified identifiers into an (unqualified)
 id and a domain name. In the code and API documentation, we sometimes call a
-qualified username a "handle".
+username a "handle" and a qualified username a "qualified handle".
 
 
 API between Federators
