@@ -1,5 +1,5 @@
 How to connect the desktop application to a custom backend
-========================================================
+==========================================================
 
 Introduction
 ------------
