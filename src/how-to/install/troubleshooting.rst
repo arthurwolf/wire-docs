@@ -110,11 +110,18 @@ I deployed the ``demo-smtp`` but I'm not receiving any verification emails
 I am using SSL/TLS spoofing software and need to know how to configure it
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The wire client implements certificate pinning.
+All Wire clients implement certificate pinning:
 
-You need to configure your software not to intercept traffic to the wire server endpoints, identified by the following regular expressions:
+- Web
+- Desktop
+- iOs
+- Android
+
+By default, Wire client implements certificate pinning for domains identified by the following regular expressions:
 
 - app.wire.com
 - (www.)?wire.com
 - prod-(assets|nginz-https|nginz-ssl).wire.com
 - [a-z0-9]{14,63}.cloudfront.net
+
+You need to configure your software not to intercept traffic to the wire server endpoints matching these regular expressions.
