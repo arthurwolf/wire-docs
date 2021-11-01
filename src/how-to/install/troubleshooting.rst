@@ -114,7 +114,7 @@ All Wire clients implement certificate pinning:
 
 - Web
 - Desktop
-- iOs
+- iOs (`See <https://github.com/wireapp/wire-ios-build-configuration/blob/master/Backend.bundle/production.json#L14>`__)
 - Android
 
 By default, Wire client implements certificate pinning for domains identified by the following regular expressions:
